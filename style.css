@@ -1,0 +1,262 @@
+/*!
+Theme Name:   Quinn's Theme
+Author:       Brandon
+Description:  A theme designed to demonstrate my ability.
+Version:      1.0.0
+Requires PHP: 5.6.0
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  quinn
+Tags:         e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
+
+You can read more about the calculator we use in our Sass here: https://github.com/modularscale/modularscale-sass
+
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+Images License: GNU General Public License v2 or later
+*/
+
+html, body {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: "Manrope", sans-serif;
+    background-color: #f3f3f3;
+}
+h1, h2, h3, h4, h5, p {
+    padding: 0px;
+    margin: 0px;
+}
+h2.section_title {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    padding: 25px 0px 35px 0px;
+    font-size: 2.3em;
+}
+.sale_info {
+    background-color: #222;
+    color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    font-size: 0.8em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+header {
+    background-color: #fff;
+    padding: 20px 12%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+header.nb {
+    border-bottom: unset;
+}
+header.sticky {
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+header h2.siteTitle {
+    color: #222;
+    font-size: 2.4em;
+    font-weight: lighter;
+    text-decoration: underline;
+    margin-right: 75px;
+}
+header a:not(.site_title) {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+    font-size: 0.9em;
+    letter-spacing: 1.10px;
+    transition: ease 0.2s all;
+}
+header a:not(.site_title):hover {
+    color: #111;
+    border-bottom: 2px solid #111;
+}
+header a:not(.site_title):not(:last-child){
+    margin-right: 35px;
+}
+header .quick_nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+header .quick_nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+header .quick_nav ul li {
+    padding: 6px 12px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    width: 28px;
+    border-radius: 100%;
+}
+header .quick_nav ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+/*
+ *  Global Page Styling
+ */
+.product_list {
+    display: flex;
+}
+a.product {
+    flex-basis: 33.333%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #222;
+    box-sizing: border-box;
+    padding: 10px 0 15px 15px;
+    transition: ease 0.2s all;
+    cursor: pointer;
+}
+a.product .product_image {
+    overflow: hidden;
+}
+a.product img {
+    width: 100%;
+    transition: ease 0.2s all;
+}
+a.product:hover .product_image {
+    background-color: #f5f5f5;
+}
+a.product:hover img {
+    transform: scale(1.05);
+}
+a.product:active img {
+    transform: scale(0.95);
+}
+a.product h2 {
+    font-size: 1em;
+    padding: 10px 0 5px 0;
+}
+
+
+/*
+    Footer Styling
+*/
+footer {
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+}
+footer .footer_columns {
+    display: flex;
+    padding: 20px 12%;
+}
+footer .footer_columns .column {
+    display: flex;
+    flex-direction: column;
+}
+footer .footer_columns .column.column-sm {
+    flex-basis: 20%;
+}
+footer .footer_columns .column.column-fill {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+footer .footer_columns h1 {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+footer .footer_columns a {
+    color: #a3a3a3;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+footer .footer_columns a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+footer .footer_columns p {
+    color: #a3a3a3;
+    font-size: 0.9em;
+}
+footer .input-element {
+    display: flex;
+    align-items: center;
+}
+footer .input-element input[type="email"] {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    height: 45px;
+    outline: none;
+    padding: 0 20px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    color: #fff;
+}
+footer .input-element input[type="email"]::-webkit-input-placeholder {
+    color: #a3a3a3;
+}
+footer .input-element button {
+    background-color: #e5e5e5;
+    padding: 0 20px;
+    height: 45px;
+    box-sizing: border-box;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: unset;
+    font-size: 0.8em;
+    letter-spacing: 1.05px;
+    margin-left: 20px;
+}
+footer .social_links {
+    list-style: none;
+    padding: 0px;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+footer .social_links a {
+    color: #222;
+    transition: ease 0.2s all;
+}
+footer .social_links a:hover {
+    text-decoration: none;
+}
+footer .social_links a:not(:last-child) {
+    margin-right: 10px;
+}
+footer .social_links a li {
+    background-color: lightblue;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: ease 0.2s all;
+    font-size: 0.8em;
+    border-radius: 100%;
+    justify-content: center;
+}
+footer .social_links a:hover li {
+    background-color: #222;
+}
+footer .copyright {
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #a3a3a3;
+}
+footer .copyright i {
+    margin-right: 10px;
+}
